@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Твой Лучший Друг - Магазин Собак</title>
+    <style>
+        body {
+            background-color: #e6fffa;
+            font-family: "Comic Sans MS", "Chalkboard SE", cursive; /* Король плохого вкуса */
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: yellow;
+            text-align: center;
+            padding: 30px;
+            border-bottom: 10px dotted #2e7d32;
+        }
+
+        .nav {
+            background: #fff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 5px 5px grey;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #ff6f00;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0 20px;
+            border: 2px solid #ff6f00;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+
+        .nav a:hover {
+            background-color: #ff6f00;
+            color: white;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 50px; /* Слишком сильное скругление */
+            padding: 40px;
+            border: 5px solid #4CAF50;
+        }
+
+        .dog-card {
+            display: inline-block;
+            width: 40%;
+            margin: 4%;
+            border: 3px solid #81c784;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .dog-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .delivery-box {
+            background-color: #fff9c4;
+            padding: 20px;
+            border-left: 10px solid #fbc02d;
+            margin: 20px 0;
+        }
+
+        .feedback-form {
+            background-color: #f3f3f3;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            background-color: #ff4081;
+            color: white;
+            font-size: 22px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+
+        #map {
+            width: 100%;
+            height: 400px;
+            border: 3px solid #4CAF50;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .contacts-box {
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-section {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .info-section p {
+            flex: 1;
+            background: #f1f8e9;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 5px solid #4CAF50;
+            min-width: 200px;
+        }
+    </style>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e69216a3-a4e3-4f8f-a4c3-9e2f2b8c8c8c&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="header">
+    <h1>🐶 ГАВ-ГАВ МАРКЕТ 🐶</h1>
+    <p>Продажа щенков и радости!</p>
+</div>
+
+<div class="nav">
+    <a href="#catalog">ЩЕНКИ</a>
+    <a href="#delivery">ДОСТАВКА</a>
+    <a href="#contacts">КОНТАКТЫ</a>
+</div>
+
+<div class="content">
+    <section id="catalog">
+        <h2 style="color: #2e7d32; text-decoration: underline;">Наш каталог (самые милые):</h2>
+        
+        <div class="dog-card">
+            <img src="https://images.unsplash.com/photo-1633722715463-d30628519e23?w=300&h=300&fit=crop" alt="Корги Артем">
+            <h3>Корги Артем</h3>
+            <p>Уши большие, лапки короткие. Очень добрый.</p>
+            <p><b>Цена: 50 000 косточек</b></p>
+            <p style="font-size: 12px; color: #666;">⭐⭐⭐⭐⭐ (127 отзывов)</p>
+        </div>
+
+        <div class="dog-card">
+            <img src="https://images.unsplash.com/photo-1605568427561-40dd23c2acea?w=300&h=300&fit=crop" alt="Хаски Волк">
+            <h3>Хаски "Волк"</h3>
+            <p>Глаза голубые, воет по ночам как динозавр.</p>
+            <p><b>Цена: 40 000 косточек</b></p>
+            <p style="font-size: 12px; color: #666;">⭐⭐⭐⭐⭐ (89 отзывов)</p>
+        </div>
+
+        <div class="dog-card">
+            <img src="https://images.unsplash.com/photo-1587300411107-ec5ff141dd51?w=300&h=300&fit=crop" alt="Лабрадор Бакс">
+            <h3>Лабрадор Бакс</h3>
+            <p>Чёрный, любит плавать и нырять за палками.</p>
+            <p><b>Цена: 35 000 косточек</b></p>
+            <p style="font-size: 12px; color: #666;">⭐⭐⭐⭐ (156 отзывов)</p>
+        </div>
+
+        <div class="dog-card">
+            <img src="https://images.unsplash.com/photo-1583510328633-f32281efd87f?w=300&h=300&fit=crop" alt="Золотой Ретривер">
+            <h3>Золотой Ретривер Лучик</h3>
+            <p>Самая добрая собака на земле. Умеет улыбаться.</p>
+            <p><b>Цена: 45 000 косточек</b></p>
+            <p style="font-size: 12px; color: #666;">⭐⭐⭐⭐⭐ (203 отзыва)</p>
+        </div>
+    </section>
+
+    <section id="delivery">
+        <h2 style="color: #2e7d32;">Как забрать друга?</h2>
+        <div class="delivery-box">
+            <ul>
+                <li>✔️ Самовывоз из будки.</li>
+                <li>✔️ Курьером в специальной корзинке (+500р).</li>
+                <li>✔️ Почтой России (не советуем, жалко собаку).</li>
+                <li>✔️ Доставка в ящике от Икеи (эконом вариант).</li>
+            </ul>
+        </div>
+        <div class="info-section">
+            <p><strong>🕐 Режим работы:</strong><br>Пн-Пт: 10:00-19:00<br>Сб-Вс: 11:00-18:00<br>Выходной: среда</p>
+            <p><strong>📞 Обслуживание клиентов:</strong><br>Звоните: 8-800-333-33-33<br>WhatsApp: доступен<br>Telegram: @gavgavmarket</p>
+            <p><strong>🎁 Бонусы:</strong><br>При покупке собаки - получите чип бесплатно!<br>Первый месяц корма со скидкой 30%</p>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h2 style="color: #2e7d32;">📍 Наши контакты и местоположение</h2>
+        <div class="contacts-box">
+            <h3>Где нас найти:</h3>
+            <p><strong>Адрес:</strong> Москва, ул. Собачья, д. 42, корпус 5</p>
+            <p><strong>Метро:</strong> В 5 минутах от станции "Собачья площадь"</p>
+            <p><strong>Парковка:</strong> Бесплатная парковка для клиентов на 50 мест</p>
+        </div>
+        <div id="map"></div>
+        <script type="text/javascript">
+            ymaps.ready(function() {
+                var myMap = new ymaps.Map('map', {
+                    center: [55.7558, 37.6173],
+                    zoom: 13,
+                    controls: ['zoomControl', 'fullscreenControl']
+                });
+
+                var placemark = new ymaps.Placemark([55.7558, 37.6173], {
+                    balloonContent: '<strong>🐶 ГАВ-ГАВ МАРКЕТ 🐶</strong><br/>Магазин щенков и радости<br/>Адрес: ул. Собачья, д. 42, корп. 5<br/>Телефон: 8-800-333-33-33<br/>Режим: Пн-Пт 10:00-19:00<br/>Сб-Вс 11:00-18:00'
+                }, {
+                    preset: 'islands#blueDotIcon',
+                    iconColor: '#4CAF50'
+                });
+
+                myMap.geoObjects.add(placemark);
+            });
+        </script>
+
+        <h3 style="color: #2e7d32; margin-top: 40px;">Напишите нам!</h3>
+        <div class="feedback-form">
+            <form action="javascript:alert('Сообщение улетело в космос!')">
+                <label>Как вас зовут?</label><br>
+                <input type="text" placeholder="Иван Иванович" required><br><br>
+                
+                <label>Какую породу хотите?</label><br>
+                <select style="width: 94%; padding: 10px;">
+                    <option>Корги</option>
+                    <option>Хаски</option>
+                    <option>Лабрадор</option>
+                    <option>Золотой Ретривер</option>
+                    <option>Просто хорошая собака</option>
+                </select><br><br>
+
+                <label>Ваше сообщение:</label><br>
+                <textarea rows="5" placeholder="Хочу собаку, чтобы кормить её колбасой..."></textarea><br>
+
+                <button type="submit" class="btn">ОТПРАВИТЬ ЛАПКУ 🐾</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>Сайт сделан для Первого Казачьего Колледжа  в 2026 году. Все собаки настоящие.</p>
+</footer>
+
+</body>
+</html>

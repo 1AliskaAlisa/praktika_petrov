@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>МОТО-РЫНОК 24 - ЛУЧШИЕ ЦЕНЫ!!!</title>
+    <style>
+        body {
+            background-color: #cccccc; /* Серый фон как в старой винде */
+            font-family: "Courier New", monospace;
+            color: #000000;
+        }
+        header {
+            background-color: #000080; /* Темно-синий из Win98 */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid red;
+        }
+        nav {
+            background: #eee;
+            padding: 10px;
+            border: 2px outset #fff;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 20px;
+            color: blue;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border: 3px double black;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #ddd;
+        }
+        td img {
+            max-width: 100px;
+            height: auto;
+            border: 1px solid #666;
+        }
+        .form-group {
+            margin-bottom: 10px;
+            border: 1px dashed gray;
+            padding: 10px;
+        }
+        input[type="submit"] {
+            background: #ff0000;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+        }
+        marquee {
+            background: yellow;
+            font-weight: bold;
+        }
+        #map {
+            width: 100%;
+            height: 400px;
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_YANDEX_API_KEY&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+<header>
+    <h1>ПРОДАЖА МОТОЦИКЛОВ Б/У И НОВЫХ</h1>
+</header>
+
+<marquee>!!! ВНИМАНИЕ: СКИДКИ НА ВСЕ МОПЕДЫ ДО КОНЦА НЕДЕЛИ !!!</marquee>
+
+<div class="container">
+    <nav>
+        <a href="#catalog">КАТАЛОГ</a>
+        <a href="#delivery">ДОСТАВКА</a>
+        <a href="#feedback">ОБРАТНАЯ СВЯЗЬ</a>
+        <a href="#contacts">КОНТАКТЫ</a>
+    </nav>
+
+    <section id="catalog">
+        <h2>Каталог техники</h2>
+        <table>
+            <tr>
+                <th>Фото</th>
+                <th>Модель</th>
+                <th>Описание</th>
+                <th>Цена</th>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=120&fit=crop" alt="Ява 350"></td>
+                <td><b>Ява 350</b></td>
+                <td>Красная, валит нормально. Надежный классический мотоцикл.</td>
+                <td>60 000 руб.</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=120&fit=crop" alt="Минск"></td>
+                <td><b>Минск</b></td>
+                <td>Для леса самое то. Мощный, проходимый, без затей.</td>
+                <td>25 000 руб.</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1606664515524-2ddc6c5f7a20?w=150&h=120&fit=crop" alt="Honda CB400"></td>
+                <td><b>Honda CB400</b></td>
+                <td>Японская техника. Супер-байк для города. Почти новый!</td>
+                <td>250 000 руб.</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=120&fit=crop" alt="Yamaha YZF"></td>
+                <td><b>Yamaha YZF-R1</b></td>
+                <td>Спортбайк-король дороги. Красная молния. Осторожно, быстрая!</td>
+                <td>350 000 руб.</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1606664515524-2ddc6c5f7a20?w=150&h=120&fit=crop" alt="Kawasaki Ninja"></td>
+                <td><b>Kawasaki Ninja 400</b></td>
+                <td>Крутой мотоцикл для начинающих. Легко управляется, красивый дизайн.</td>
+                <td>180 000 руб.</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=120&fit=crop" alt="Harley-Davidson"></td>
+                <td><b>Harley-Davidson</b></td>
+                <td>Легендарный круизер. Шум мотора как симфония. Для крутых парней.</td>
+                <td>800 000 руб.</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1606664515524-2ddc6c5f7a20?w=150&h=120&fit=crop" alt="BMW G310"></td>
+                <td><b>BMW G310R</b></td>
+                <td>Немецкое качество и надежность. Идеален для длительных путешествий.</td>
+                <td>450 000 руб.</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=120&fit=crop" alt="KTM Duke"></td>
+                <td><b>KTM Duke 390</b></td>
+                <td>Австрийская мощь. Живой характер. Отлично держит крутые повороты.</td>
+                <td>220 000 руб.</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1606664515524-2ddc6c5f7a20?w=150&h=120&fit=crop" alt="Suzuki GSX"></td>
+                <td><b>Suzuki GSX-R600</b></td>
+                <td>Спортивный байк с огромной мощностью. Трассовый зверь!</td>
+                <td>320 000 руб.</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=120&fit=crop" alt="Vespa"></td>
+                <td><b>Vespa Primavera</b></td>
+                <td>Классический скутер итальянского стиля. Идеален для прогулок по городу.</td>
+                <td>150 000 руб.</td>
+            </tr>
+            <tr>
+                <td><img src="https://images.unsplash.com/photo-1606664515524-2ddc6c5f7a20?w=150&h=120&fit=crop" alt="Ducati Panigale"></td>
+                <td><b>Ducati Panigale V4</b></td>
+                <td>Итальянская красота и мощь. Для профессионалов и сумасшедших.</td>
+                <td>900 000 руб.</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="delivery">
+        <h2>Доставка</h2>
+        <p>Доставляем транспортными компаниями или на прицепе у соседа. Стоимость зависит от настроения водителя.</p>
+    </section>
+
+    <hr>
+
+    <section id="feedback">
+        <h2>Связаться с менеджером</h2>
+        <form action="#" method="get">
+            <div class="form-group">
+                Имя: <br>
+                <input type="text" name="user">
+            </div>
+            <div class="form-group">
+                Ваш вопрос: <br>
+                <textarea rows="4" cols="40"></textarea>
+            </div>
+            <input type="submit" value="ЖМИ СЮДА ЧТОБЫ ОТПРАВИТЬ">
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="contacts">
+        <h2>Наши контакты</h2>
+        <p>Адрес: Гаражный кооператив "Заря", бокс 14.</p>
+        <p>Телефон: 8-800-555-35-35</p>
+        <div id="map"></div>
+        <script type="text/javascript">
+            ymaps.ready(function() {
+                var myMap = new ymaps.Map('map', {
+                    center: [55.7558, 37.6173],
+                    zoom: 12
+                });
+
+                var placemark = new ymaps.Placemark([55.7558, 37.6173], {
+                    balloonContent: '<strong>Гаражный кооператив "Заря"</strong><br/>Бокс 14<br/>Телефон: 8-800-555-35-35'
+                }, {
+                    preset: 'islands#redMotorcyclePlacemark',
+                    iconColor: '#ff0000'
+                });
+
+                myMap.geoObjects.add(placemark);
+            });
+        </script>
+    </section>
+</div>
+
+<footer style="text-align: center; margin-top: 20px;">
+    <p>Создано в 2026 году специально для защиты лабораторной работы.</p>
+</footer>
+
+</body>
+</html>
